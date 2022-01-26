@@ -1,1 +1,5 @@
 robotframework-selenium2library==3.0.0
+robotframework-csvlib==1.0.2
+robotframework-csvlibrary==0.0.3
+robotframework-pythonlibcore==3.0.0
+PyYAML==5.3.1

@@ -1,0 +1,3083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.5 on darwin)" generated="20220126 17:45:45.197" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcases" source="/Users/pornnipas/Documents/highjump-test/testcases">
+<suite id="s1-s1" name="Readfile" source="/Users/pornnipas/Documents/highjump-test/testcases/readfile.robot">
+<test id="s1-s1-t1" name="POC CSV">
+<kw name="Read Csv File To List" library="CSVLibrary">
+<var>${list}</var>
+<arg>/Users/pornnipas/Documents/highjump-test/testcases/User_Setup_5006.csv</arg>
+<doc>Read CSV file and return its content as a Python list of tuples.</doc>
+<msg timestamp="20220126 17:45:45.627" level="INFO">${list} = [['\ufeffAssigned Store', 'Store Name', 'Name', 'HJ One User', 'Device', 'Port', 'Add User', 'Add Store', 'Email Address', 'Login type', 'Role', 'Assignee'], ['TH5006', 'Pitsanulok', 'Kasama Danpuwaku...</msg>
+<status status="PASS" starttime="20220126 17:45:45.627" endtime="20220126 17:45:45.628"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length_list}</var>
+<arg>${list}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220126 17:45:45.628" level="INFO">Length is 66</msg>
+<msg timestamp="20220126 17:45:45.628" level="INFO">${length_list} = 66</msg>
+<status status="PASS" starttime="20220126 17:45:45.628" endtime="20220126 17:45:45.628"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${length_list}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.629" level="INFO">['\ufeffAssigned Store', 'Store Name', 'Name', 'HJ One User', 'Device', 'Port', 'Add User', 'Add Store', 'Email Address', 'Login type', 'Role', 'Assignee']</msg>
+<status status="PASS" starttime="20220126 17:45:45.628" endtime="20220126 17:45:45.629"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.629" level="INFO">${assigned_store} = ﻿Assigned Store</msg>
+<status status="PASS" starttime="20220126 17:45:45.629" endtime="20220126 17:45:45.629"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.629" level="INFO">${store_name} = Store Name</msg>
+<status status="PASS" starttime="20220126 17:45:45.629" endtime="20220126 17:45:45.629"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.630" level="INFO">${name} = Name</msg>
+<status status="PASS" starttime="20220126 17:45:45.629" endtime="20220126 17:45:45.630"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.630" level="INFO">${hj_one_user} = HJ One User</msg>
+<status status="PASS" starttime="20220126 17:45:45.630" endtime="20220126 17:45:45.630"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.630" level="INFO">${email_address} = Email Address</msg>
+<status status="PASS" starttime="20220126 17:45:45.630" endtime="20220126 17:45:45.630"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.631" level="INFO">${role} = Role</msg>
+<status status="PASS" starttime="20220126 17:45:45.630" endtime="20220126 17:45:45.631"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.628" endtime="20220126 17:45:45.631"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.631" level="INFO">['TH5006', 'Pitsanulok', 'Kasama Danpuwakun', 'TH22924405', 'IM_1030', '4610', 'New', 'New', 'Kasama.Danpuwakun@lotuss.com', 'SSO', 'Store Manager', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.631" endtime="20220126 17:45:45.631"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.631" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.631" endtime="20220126 17:45:45.631"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.632" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.631" endtime="20220126 17:45:45.632"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.632" level="INFO">${name} = Kasama Danpuwakun</msg>
+<status status="PASS" starttime="20220126 17:45:45.632" endtime="20220126 17:45:45.632"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.632" level="INFO">${hj_one_user} = TH22924405</msg>
+<status status="PASS" starttime="20220126 17:45:45.632" endtime="20220126 17:45:45.632"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.632" level="INFO">${email_address} = Kasama.Danpuwakun@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.632" endtime="20220126 17:45:45.633"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.633" level="INFO">${role} = Store Manager</msg>
+<status status="PASS" starttime="20220126 17:45:45.633" endtime="20220126 17:45:45.633"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.631" endtime="20220126 17:45:45.633"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.633" level="INFO">['TH5006', 'Pitsanulok', 'Pansa Sueaman', 'TH23710920', 'IM_1031', '4610', 'New', 'New', 'Pansa.Sueaman@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.633" endtime="20220126 17:45:45.633"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.634" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.633" endtime="20220126 17:45:45.634"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.634" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.634" endtime="20220126 17:45:45.634"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.634" level="INFO">${name} = Pansa Sueaman</msg>
+<status status="PASS" starttime="20220126 17:45:45.634" endtime="20220126 17:45:45.634"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.634" level="INFO">${hj_one_user} = TH23710920</msg>
+<status status="PASS" starttime="20220126 17:45:45.634" endtime="20220126 17:45:45.635"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.635" level="INFO">${email_address} = Pansa.Sueaman@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.635" endtime="20220126 17:45:45.635"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.635" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.635" endtime="20220126 17:45:45.635"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.633" endtime="20220126 17:45:45.635"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.636" level="INFO">['TH5006', 'Pitsanulok', 'Kowit Phoemphun', 'TH30021020', 'IM_1032', '4610', 'New', 'New', 'Kowit.Phoemphun@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.635" endtime="20220126 17:45:45.636"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.636" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.636" endtime="20220126 17:45:45.636"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.636" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.636" endtime="20220126 17:45:45.636"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.636" level="INFO">${name} = Kowit Phoemphun</msg>
+<status status="PASS" starttime="20220126 17:45:45.636" endtime="20220126 17:45:45.636"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.637" level="INFO">${hj_one_user} = TH30021020</msg>
+<status status="PASS" starttime="20220126 17:45:45.637" endtime="20220126 17:45:45.637"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.637" level="INFO">${email_address} = Kowit.Phoemphun@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.637" endtime="20220126 17:45:45.637"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.637" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.637" endtime="20220126 17:45:45.637"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.635" endtime="20220126 17:45:45.637"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.638" level="INFO">['TH5006', 'Pitsanulok', 'Sirimongkhon Manchaona', 'TH30056073', 'IM_1033', '4610', 'New', 'New', 'Sirimongkhon.Manchaona@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.638" endtime="20220126 17:45:45.638"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.638" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.638" endtime="20220126 17:45:45.638"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.638" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.638" endtime="20220126 17:45:45.638"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.639" level="INFO">${name} = Sirimongkhon Manchaona</msg>
+<status status="PASS" starttime="20220126 17:45:45.639" endtime="20220126 17:45:45.639"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.639" level="INFO">${hj_one_user} = TH30056073</msg>
+<status status="PASS" starttime="20220126 17:45:45.639" endtime="20220126 17:45:45.639"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.639" level="INFO">${email_address} = Sirimongkhon.Manchaona@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.639" endtime="20220126 17:45:45.639"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.640" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.639" endtime="20220126 17:45:45.640"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.638" endtime="20220126 17:45:45.640"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.640" level="INFO">['TH5006', 'Pitsanulok', 'Pornanan Kernim', 'TH30060404', 'IM_1034', '4610', 'New', 'New', 'Pornanan.Kernim@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.640" endtime="20220126 17:45:45.640"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.640" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.640" endtime="20220126 17:45:45.640"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.641" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.640" endtime="20220126 17:45:45.641"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.641" level="INFO">${name} = Pornanan Kernim</msg>
+<status status="PASS" starttime="20220126 17:45:45.641" endtime="20220126 17:45:45.641"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.641" level="INFO">${hj_one_user} = TH30060404</msg>
+<status status="PASS" starttime="20220126 17:45:45.641" endtime="20220126 17:45:45.641"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.642" level="INFO">${email_address} = Pornanan.Kernim@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.641" endtime="20220126 17:45:45.642"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.642" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.642" endtime="20220126 17:45:45.642"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.640" endtime="20220126 17:45:45.642"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.642" level="INFO">['TH5006', 'Pitsanulok', 'Atsadawut Intaeng', 'TH30066508', 'IM_1035', '4610', 'New', 'New', 'Atsadawut.Intaeng@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.642" endtime="20220126 17:45:45.642"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.643" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.642" endtime="20220126 17:45:45.643"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.643" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.643" endtime="20220126 17:45:45.643"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.643" level="INFO">${name} = Atsadawut Intaeng</msg>
+<status status="PASS" starttime="20220126 17:45:45.643" endtime="20220126 17:45:45.643"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.644" level="INFO">${hj_one_user} = TH30066508</msg>
+<status status="PASS" starttime="20220126 17:45:45.643" endtime="20220126 17:45:45.644"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.644" level="INFO">${email_address} = Atsadawut.Intaeng@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.644" endtime="20220126 17:45:45.644"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.644" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.644" endtime="20220126 17:45:45.644"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.642" endtime="20220126 17:45:45.644"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.645" level="INFO">['TH5006', 'Pitsanulok', 'Amphon Phetchan', 'TH30072745', 'IM_1036', '4610', 'New', 'New', 'Amphon.Phetchan@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.644" endtime="20220126 17:45:45.645"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.645" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.645" endtime="20220126 17:45:45.645"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.645" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.645" endtime="20220126 17:45:45.645"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.645" level="INFO">${name} = Amphon Phetchan</msg>
+<status status="PASS" starttime="20220126 17:45:45.645" endtime="20220126 17:45:45.645"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.646" level="INFO">${hj_one_user} = TH30072745</msg>
+<status status="PASS" starttime="20220126 17:45:45.645" endtime="20220126 17:45:45.646"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.646" level="INFO">${email_address} = Amphon.Phetchan@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.646" endtime="20220126 17:45:45.646"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.646" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.646" endtime="20220126 17:45:45.646"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.644" endtime="20220126 17:45:45.646"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.647" level="INFO">['TH5006', 'Pitsanulok', 'Warayut Sangsri', 'TH30073974', 'IM_1037', '4610', 'New', 'New', 'Warayut.Sangsri@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.647" endtime="20220126 17:45:45.647"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.647" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.647" endtime="20220126 17:45:45.647"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.648" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.647" endtime="20220126 17:45:45.648"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.648" level="INFO">${name} = Warayut Sangsri</msg>
+<status status="PASS" starttime="20220126 17:45:45.648" endtime="20220126 17:45:45.648"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.649" level="INFO">${hj_one_user} = TH30073974</msg>
+<status status="PASS" starttime="20220126 17:45:45.648" endtime="20220126 17:45:45.649"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.649" level="INFO">${email_address} = Warayut.Sangsri@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.649" endtime="20220126 17:45:45.649"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.649" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.649" endtime="20220126 17:45:45.649"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.647" endtime="20220126 17:45:45.650"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.650" level="INFO">['TH5006', 'Pitsanulok', 'Natthanan Mayou', 'TH30076849', 'IM_1038', '4610', 'New', 'New', 'Natthanan.Mayou@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.650" endtime="20220126 17:45:45.650"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.650" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.650" endtime="20220126 17:45:45.650"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.651" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.650" endtime="20220126 17:45:45.651"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.652" level="INFO">${name} = Natthanan Mayou</msg>
+<status status="PASS" starttime="20220126 17:45:45.651" endtime="20220126 17:45:45.652"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.652" level="INFO">${hj_one_user} = TH30076849</msg>
+<status status="PASS" starttime="20220126 17:45:45.652" endtime="20220126 17:45:45.653"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.653" level="INFO">${email_address} = Natthanan.Mayou@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.653" endtime="20220126 17:45:45.653"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.653" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.653" endtime="20220126 17:45:45.653"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.650" endtime="20220126 17:45:45.653"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.654" level="INFO">['TH5006', 'Pitsanulok', 'Kodsarin Somna', 'TH30078892', 'IM_1039', '4610', 'New', 'New', 'Kodsarin.Somna@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.653" endtime="20220126 17:45:45.654"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.654" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.654" endtime="20220126 17:45:45.654"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.654" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.654" endtime="20220126 17:45:45.654"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.655" level="INFO">${name} = Kodsarin Somna</msg>
+<status status="PASS" starttime="20220126 17:45:45.655" endtime="20220126 17:45:45.655"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.655" level="INFO">${hj_one_user} = TH30078892</msg>
+<status status="PASS" starttime="20220126 17:45:45.655" endtime="20220126 17:45:45.655"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.655" level="INFO">${email_address} = Kodsarin.Somna@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.655" endtime="20220126 17:45:45.655"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.656" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.656" endtime="20220126 17:45:45.656"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.653" endtime="20220126 17:45:45.656"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.656" level="INFO">['TH5006', 'Pitsanulok', 'Chonthicha Phetbangkerd', 'TH30083714', 'IM_1040', '4610', 'New', 'New', 'Chonthicha.Phetbangkerd@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.656" endtime="20220126 17:45:45.656"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.657" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.656" endtime="20220126 17:45:45.657"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.657" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.657" endtime="20220126 17:45:45.657"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.657" level="INFO">${name} = Chonthicha Phetbangkerd</msg>
+<status status="PASS" starttime="20220126 17:45:45.657" endtime="20220126 17:45:45.657"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.658" level="INFO">${hj_one_user} = TH30083714</msg>
+<status status="PASS" starttime="20220126 17:45:45.658" endtime="20220126 17:45:45.658"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.659" level="INFO">${email_address} = Chonthicha.Phetbangkerd@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.658" endtime="20220126 17:45:45.659"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.659" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.659" endtime="20220126 17:45:45.659"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.656" endtime="20220126 17:45:45.659"/>
+</iter>
+<iter>
+<var name="${i}">12</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.660" level="INFO">['TH5006', 'Pitsanulok', 'Sanguan Mhonethong', 'TH30086001', 'IM_1041', '4610', 'New', 'New', 'Sanguan.Mhonethong@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.660" endtime="20220126 17:45:45.660"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.660" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.660" endtime="20220126 17:45:45.660"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.661" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.660" endtime="20220126 17:45:45.661"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.661" level="INFO">${name} = Sanguan Mhonethong</msg>
+<status status="PASS" starttime="20220126 17:45:45.661" endtime="20220126 17:45:45.661"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.662" level="INFO">${hj_one_user} = TH30086001</msg>
+<status status="PASS" starttime="20220126 17:45:45.661" endtime="20220126 17:45:45.662"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.662" level="INFO">${email_address} = Sanguan.Mhonethong@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.662" endtime="20220126 17:45:45.662"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.663" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.662" endtime="20220126 17:45:45.663"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.660" endtime="20220126 17:45:45.663"/>
+</iter>
+<iter>
+<var name="${i}">13</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.663" level="INFO">['TH5006', 'Pitsanulok', 'Wattana Phatcha', 'TH30091059', 'IM_1042', '4610', 'New', 'New', 'Wattana.Phatcha@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.663" endtime="20220126 17:45:45.663"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.664" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.663" endtime="20220126 17:45:45.664"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.664" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.664" endtime="20220126 17:45:45.664"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.664" level="INFO">${name} = Wattana Phatcha</msg>
+<status status="PASS" starttime="20220126 17:45:45.664" endtime="20220126 17:45:45.664"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.665" level="INFO">${hj_one_user} = TH30091059</msg>
+<status status="PASS" starttime="20220126 17:45:45.665" endtime="20220126 17:45:45.665"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.665" level="INFO">${email_address} = Wattana.Phatcha@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.665" endtime="20220126 17:45:45.665"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.666" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.665" endtime="20220126 17:45:45.666"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.663" endtime="20220126 17:45:45.666"/>
+</iter>
+<iter>
+<var name="${i}">14</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.666" level="INFO">['TH5006', 'Pitsanulok', 'Hathaichanok Sueaphae', 'TH30091382', 'IM_1043', '4610', 'New', 'New', 'Hathaichanok.Sueaphae@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.666" endtime="20220126 17:45:45.666"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.666" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.666" endtime="20220126 17:45:45.666"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.667" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.667" endtime="20220126 17:45:45.667"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.667" level="INFO">${name} = Hathaichanok Sueaphae</msg>
+<status status="PASS" starttime="20220126 17:45:45.667" endtime="20220126 17:45:45.667"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.668" level="INFO">${hj_one_user} = TH30091382</msg>
+<status status="PASS" starttime="20220126 17:45:45.668" endtime="20220126 17:45:45.668"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.668" level="INFO">${email_address} = Hathaichanok.Sueaphae@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.668" endtime="20220126 17:45:45.668"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.668" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.668" endtime="20220126 17:45:45.668"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.666" endtime="20220126 17:45:45.669"/>
+</iter>
+<iter>
+<var name="${i}">15</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.669" level="INFO">['TH5006', 'Pitsanulok', 'Suthathip Thapchiangthong', 'TH30094732', 'IM_1044', '4610', 'New', 'New', 'Suthathip.Thapchiangthong@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.669" endtime="20220126 17:45:45.669"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.669" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.669" endtime="20220126 17:45:45.669"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.670" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.669" endtime="20220126 17:45:45.670"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.670" level="INFO">${name} = Suthathip Thapchiangthong</msg>
+<status status="PASS" starttime="20220126 17:45:45.670" endtime="20220126 17:45:45.670"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.670" level="INFO">${hj_one_user} = TH30094732</msg>
+<status status="PASS" starttime="20220126 17:45:45.670" endtime="20220126 17:45:45.670"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.671" level="INFO">${email_address} = Suthathip.Thapchiangthong@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.670" endtime="20220126 17:45:45.671"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.671" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.671" endtime="20220126 17:45:45.671"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.669" endtime="20220126 17:45:45.671"/>
+</iter>
+<iter>
+<var name="${i}">16</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.671" level="INFO">['TH5006', 'Pitsanulok', 'Benchawan Rongkaeo', 'TH30097880', 'IM_1045', '4610', 'New', 'New', 'Benchawan.Rongkaeo@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.671" endtime="20220126 17:45:45.671"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.672" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.671" endtime="20220126 17:45:45.672"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.672" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.672" endtime="20220126 17:45:45.672"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.672" level="INFO">${name} = Benchawan Rongkaeo</msg>
+<status status="PASS" starttime="20220126 17:45:45.672" endtime="20220126 17:45:45.672"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.673" level="INFO">${hj_one_user} = TH30097880</msg>
+<status status="PASS" starttime="20220126 17:45:45.672" endtime="20220126 17:45:45.673"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.673" level="INFO">${email_address} = Benchawan.Rongkaeo@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.673" endtime="20220126 17:45:45.673"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.673" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.673" endtime="20220126 17:45:45.673"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.671" endtime="20220126 17:45:45.673"/>
+</iter>
+<iter>
+<var name="${i}">17</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.674" level="INFO">['TH5006', 'Pitsanulok', 'Atcharaporn Phoopom', 'TH30097969', 'IM_1046', '4610', 'New', 'New', 'Atcharaporn.Phoopom@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.673" endtime="20220126 17:45:45.674"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.674" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.674" endtime="20220126 17:45:45.674"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.674" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.674" endtime="20220126 17:45:45.674"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.675" level="INFO">${name} = Atcharaporn Phoopom</msg>
+<status status="PASS" starttime="20220126 17:45:45.675" endtime="20220126 17:45:45.675"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.675" level="INFO">${hj_one_user} = TH30097969</msg>
+<status status="PASS" starttime="20220126 17:45:45.675" endtime="20220126 17:45:45.675"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.675" level="INFO">${email_address} = Atcharaporn.Phoopom@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.675" endtime="20220126 17:45:45.675"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.676" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.676" endtime="20220126 17:45:45.676"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.673" endtime="20220126 17:45:45.676"/>
+</iter>
+<iter>
+<var name="${i}">18</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.676" level="INFO">['TH5006', 'Pitsanulok', 'Peerapong Ketkaew', 'TH30103054', 'IM_1047', '4610', 'New', 'New', 'Peerapong.Ketkaew@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.676" endtime="20220126 17:45:45.676"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.676" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.676" endtime="20220126 17:45:45.676"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.677" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.677" endtime="20220126 17:45:45.677"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.677" level="INFO">${name} = Peerapong Ketkaew</msg>
+<status status="PASS" starttime="20220126 17:45:45.677" endtime="20220126 17:45:45.677"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.677" level="INFO">${hj_one_user} = TH30103054</msg>
+<status status="PASS" starttime="20220126 17:45:45.677" endtime="20220126 17:45:45.677"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.678" level="INFO">${email_address} = Peerapong.Ketkaew@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.678" endtime="20220126 17:45:45.678"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.678" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.678" endtime="20220126 17:45:45.678"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.676" endtime="20220126 17:45:45.678"/>
+</iter>
+<iter>
+<var name="${i}">19</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.678" level="INFO">['TH5006', 'Pitsanulok', 'Wilawan Prungpream', 'TH30104368', 'IM_1048', '4610', 'New', 'New', 'Wilawan.Prungpream@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.678" endtime="20220126 17:45:45.678"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.679" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.679" endtime="20220126 17:45:45.679"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.679" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.679" endtime="20220126 17:45:45.679"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.679" level="INFO">${name} = Wilawan Prungpream</msg>
+<status status="PASS" starttime="20220126 17:45:45.679" endtime="20220126 17:45:45.679"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.680" level="INFO">${hj_one_user} = TH30104368</msg>
+<status status="PASS" starttime="20220126 17:45:45.680" endtime="20220126 17:45:45.680"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.680" level="INFO">${email_address} = Wilawan.Prungpream@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.680" endtime="20220126 17:45:45.680"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.680" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.680" endtime="20220126 17:45:45.680"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.678" endtime="20220126 17:45:45.680"/>
+</iter>
+<iter>
+<var name="${i}">20</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.681" level="INFO">['TH5006', 'Pitsanulok', 'Nongkral Pluengaphai', 'TH30105804', 'IM_1049', '4610', 'New', 'New', 'Nongkral.Pluengaphai@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.681" endtime="20220126 17:45:45.681"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.681" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.681" endtime="20220126 17:45:45.681"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.681" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.681" endtime="20220126 17:45:45.681"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.682" level="INFO">${name} = Nongkral Pluengaphai</msg>
+<status status="PASS" starttime="20220126 17:45:45.682" endtime="20220126 17:45:45.682"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.682" level="INFO">${hj_one_user} = TH30105804</msg>
+<status status="PASS" starttime="20220126 17:45:45.682" endtime="20220126 17:45:45.682"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.682" level="INFO">${email_address} = Nongkral.Pluengaphai@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.682" endtime="20220126 17:45:45.682"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.683" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.683" endtime="20220126 17:45:45.683"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.680" endtime="20220126 17:45:45.683"/>
+</iter>
+<iter>
+<var name="${i}">21</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.683" level="INFO">['TH5006', 'Pitsanulok', 'Sasinan Kongma', 'TH30108282', 'IM_1050', '4610', 'New', 'New', 'Sasinan.Kongma@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.683" endtime="20220126 17:45:45.683"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.683" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.683" endtime="20220126 17:45:45.684"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.684" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.684" endtime="20220126 17:45:45.684"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.684" level="INFO">${name} = Sasinan Kongma</msg>
+<status status="PASS" starttime="20220126 17:45:45.684" endtime="20220126 17:45:45.684"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.684" level="INFO">${hj_one_user} = TH30108282</msg>
+<status status="PASS" starttime="20220126 17:45:45.684" endtime="20220126 17:45:45.684"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.685" level="INFO">${email_address} = Sasinan.Kongma@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.685" endtime="20220126 17:45:45.685"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.685" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.685" endtime="20220126 17:45:45.685"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.683" endtime="20220126 17:45:45.685"/>
+</iter>
+<iter>
+<var name="${i}">22</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.685" level="INFO">['TH5006', 'Pitsanulok', 'Suwanan Makmun', 'TH30108818', 'IM_1051', '4610', 'New', 'New', 'Suwanan.Makmun@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.685" endtime="20220126 17:45:45.685"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.686" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.686" endtime="20220126 17:45:45.686"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.686" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.686" endtime="20220126 17:45:45.686"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.686" level="INFO">${name} = Suwanan Makmun</msg>
+<status status="PASS" starttime="20220126 17:45:45.686" endtime="20220126 17:45:45.686"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.688" level="INFO">${hj_one_user} = TH30108818</msg>
+<status status="PASS" starttime="20220126 17:45:45.687" endtime="20220126 17:45:45.688"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.688" level="INFO">${email_address} = Suwanan.Makmun@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.688" endtime="20220126 17:45:45.688"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.688" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.688" endtime="20220126 17:45:45.688"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.685" endtime="20220126 17:45:45.688"/>
+</iter>
+<iter>
+<var name="${i}">23</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.689" level="INFO">['TH5006', 'Pitsanulok', 'Witawat Ckumchawna', 'TH40009723', 'IM_1052', '4610', 'New', 'New', 'Witawat.Ckumchawna@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.689" endtime="20220126 17:45:45.689"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.689" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.689" endtime="20220126 17:45:45.689"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.689" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.689" endtime="20220126 17:45:45.690"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.690" level="INFO">${name} = Witawat Ckumchawna</msg>
+<status status="PASS" starttime="20220126 17:45:45.690" endtime="20220126 17:45:45.690"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.690" level="INFO">${hj_one_user} = TH40009723</msg>
+<status status="PASS" starttime="20220126 17:45:45.690" endtime="20220126 17:45:45.690"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.690" level="INFO">${email_address} = Witawat.Ckumchawna@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.690" endtime="20220126 17:45:45.690"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.691" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.691" endtime="20220126 17:45:45.691"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.689" endtime="20220126 17:45:45.691"/>
+</iter>
+<iter>
+<var name="${i}">24</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.691" level="INFO">['TH5006', 'Pitsanulok', 'Watchara Michantho', 'TH40010674', 'IM_1053', '4610', 'New', 'New', 'Watchara.Michantho@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.691" endtime="20220126 17:45:45.691"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.692" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.691" endtime="20220126 17:45:45.692"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.692" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.692" endtime="20220126 17:45:45.692"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.692" level="INFO">${name} = Watchara Michantho</msg>
+<status status="PASS" starttime="20220126 17:45:45.692" endtime="20220126 17:45:45.692"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.693" level="INFO">${hj_one_user} = TH40010674</msg>
+<status status="PASS" starttime="20220126 17:45:45.692" endtime="20220126 17:45:45.693"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.693" level="INFO">${email_address} = Watchara.Michantho@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.693" endtime="20220126 17:45:45.693"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.694" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.693" endtime="20220126 17:45:45.694"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.691" endtime="20220126 17:45:45.694"/>
+</iter>
+<iter>
+<var name="${i}">25</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.694" level="INFO">['TH5006', 'Pitsanulok', 'Kompeth Tubsang', 'TH40012726', 'IM_1054', '4610', 'New', 'New', 'Kompeth.Tubsang@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.694" endtime="20220126 17:45:45.694"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.694" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.694" endtime="20220126 17:45:45.694"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.695" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.694" endtime="20220126 17:45:45.695"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.695" level="INFO">${name} = Kompeth Tubsang</msg>
+<status status="PASS" starttime="20220126 17:45:45.695" endtime="20220126 17:45:45.695"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.695" level="INFO">${hj_one_user} = TH40012726</msg>
+<status status="PASS" starttime="20220126 17:45:45.695" endtime="20220126 17:45:45.695"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.696" level="INFO">${email_address} = Kompeth.Tubsang@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.695" endtime="20220126 17:45:45.696"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.696" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.696" endtime="20220126 17:45:45.696"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.694" endtime="20220126 17:45:45.696"/>
+</iter>
+<iter>
+<var name="${i}">26</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.696" level="INFO">['TH5006', 'Pitsanulok', 'Duangchiwan Manchit', 'TH40012744', 'IM_1055', '4610', 'New', 'New', 'Duangchiwan.Manchit@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.696" endtime="20220126 17:45:45.696"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.697" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.696" endtime="20220126 17:45:45.697"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.697" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.697" endtime="20220126 17:45:45.697"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.697" level="INFO">${name} = Duangchiwan Manchit</msg>
+<status status="PASS" starttime="20220126 17:45:45.697" endtime="20220126 17:45:45.697"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.698" level="INFO">${hj_one_user} = TH40012744</msg>
+<status status="PASS" starttime="20220126 17:45:45.697" endtime="20220126 17:45:45.698"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.698" level="INFO">${email_address} = Duangchiwan.Manchit@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.698" endtime="20220126 17:45:45.698"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.698" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.698" endtime="20220126 17:45:45.698"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.696" endtime="20220126 17:45:45.698"/>
+</iter>
+<iter>
+<var name="${i}">27</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.699" level="INFO">['TH5006', 'Pitsanulok', 'Natthawut Opkaeo', 'TH40013066', 'IM_1056', '4610', 'New', 'New', 'Natthawut.Opkaeo@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.698" endtime="20220126 17:45:45.699"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.699" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.699" endtime="20220126 17:45:45.699"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.699" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.699" endtime="20220126 17:45:45.699"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.700" level="INFO">${name} = Natthawut Opkaeo</msg>
+<status status="PASS" starttime="20220126 17:45:45.699" endtime="20220126 17:45:45.700"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.700" level="INFO">${hj_one_user} = TH40013066</msg>
+<status status="PASS" starttime="20220126 17:45:45.700" endtime="20220126 17:45:45.700"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.700" level="INFO">${email_address} = Natthawut.Opkaeo@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.700" endtime="20220126 17:45:45.700"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.701" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.700" endtime="20220126 17:45:45.701"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.698" endtime="20220126 17:45:45.701"/>
+</iter>
+<iter>
+<var name="${i}">28</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.701" level="INFO">['TH5006', 'Pitsanulok', 'Suntichai Jamdee', 'TH40013129', 'IM_1057', '4610', 'New', 'New', 'Suntichai.Jamdee@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.701" endtime="20220126 17:45:45.711"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.712" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.712" endtime="20220126 17:45:45.712"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.712" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.712" endtime="20220126 17:45:45.712"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.713" level="INFO">${name} = Suntichai Jamdee</msg>
+<status status="PASS" starttime="20220126 17:45:45.712" endtime="20220126 17:45:45.713"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.713" level="INFO">${hj_one_user} = TH40013129</msg>
+<status status="PASS" starttime="20220126 17:45:45.713" endtime="20220126 17:45:45.713"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.714" level="INFO">${email_address} = Suntichai.Jamdee@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.713" endtime="20220126 17:45:45.714"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.714" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.714" endtime="20220126 17:45:45.714"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.701" endtime="20220126 17:45:45.714"/>
+</iter>
+<iter>
+<var name="${i}">29</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.714" level="INFO">['TH5006', 'Pitsanulok', 'Sutthasinee Jukkawan', 'TH40015892', 'IM_1058', '4610', 'New', 'New', 'Sutthasinee.Jukkawan@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.714" endtime="20220126 17:45:45.714"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.715" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.715" endtime="20220126 17:45:45.715"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.715" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.715" endtime="20220126 17:45:45.715"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.715" level="INFO">${name} = Sutthasinee Jukkawan</msg>
+<status status="PASS" starttime="20220126 17:45:45.715" endtime="20220126 17:45:45.715"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.716" level="INFO">${hj_one_user} = TH40015892</msg>
+<status status="PASS" starttime="20220126 17:45:45.715" endtime="20220126 17:45:45.716"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.716" level="INFO">${email_address} = Sutthasinee.Jukkawan@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.716" endtime="20220126 17:45:45.716"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.716" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.716" endtime="20220126 17:45:45.716"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.714" endtime="20220126 17:45:45.716"/>
+</iter>
+<iter>
+<var name="${i}">30</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.717" level="INFO">['TH5006', 'Pitsanulok', 'Daranee Phetchari', 'TH40017976', 'IM_1059', '4610', 'New', 'New', 'Daranee.Phetchari@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.717" endtime="20220126 17:45:45.717"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.717" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.717" endtime="20220126 17:45:45.717"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.717" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.717" endtime="20220126 17:45:45.717"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.718" level="INFO">${name} = Daranee Phetchari</msg>
+<status status="PASS" starttime="20220126 17:45:45.718" endtime="20220126 17:45:45.718"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.718" level="INFO">${hj_one_user} = TH40017976</msg>
+<status status="PASS" starttime="20220126 17:45:45.718" endtime="20220126 17:45:45.718"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.718" level="INFO">${email_address} = Daranee.Phetchari@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.718" endtime="20220126 17:45:45.718"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.719" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.718" endtime="20220126 17:45:45.719"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.716" endtime="20220126 17:45:45.719"/>
+</iter>
+<iter>
+<var name="${i}">31</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.719" level="INFO">['TH5006', 'Pitsanulok', 'Yutthasat Chaiphinit', 'TH40018100', 'IM_1060', '4610', 'New', 'New', 'Yutthasat.Chaiphinit@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.719" endtime="20220126 17:45:45.719"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.720" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.719" endtime="20220126 17:45:45.720"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.720" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.720" endtime="20220126 17:45:45.720"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.720" level="INFO">${name} = Yutthasat Chaiphinit</msg>
+<status status="PASS" starttime="20220126 17:45:45.720" endtime="20220126 17:45:45.720"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.721" level="INFO">${hj_one_user} = TH40018100</msg>
+<status status="PASS" starttime="20220126 17:45:45.720" endtime="20220126 17:45:45.721"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.721" level="INFO">${email_address} = Yutthasat.Chaiphinit@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.721" endtime="20220126 17:45:45.721"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.721" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.721" endtime="20220126 17:45:45.721"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.719" endtime="20220126 17:45:45.721"/>
+</iter>
+<iter>
+<var name="${i}">32</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.722" level="INFO">['TH5006', 'Pitsanulok', 'Siriprapa Nilnoi', 'TH40019700', 'IM_1061', '4610', 'New', 'New', 'Siriprapa.Nilnoi@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.722" endtime="20220126 17:45:45.722"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.722" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.722" endtime="20220126 17:45:45.722"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.723" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.722" endtime="20220126 17:45:45.723"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.723" level="INFO">${name} = Siriprapa Nilnoi</msg>
+<status status="PASS" starttime="20220126 17:45:45.723" endtime="20220126 17:45:45.723"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.723" level="INFO">${hj_one_user} = TH40019700</msg>
+<status status="PASS" starttime="20220126 17:45:45.723" endtime="20220126 17:45:45.723"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.723" level="INFO">${email_address} = Siriprapa.Nilnoi@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.723" endtime="20220126 17:45:45.723"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.724" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.724" endtime="20220126 17:45:45.724"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.721" endtime="20220126 17:45:45.724"/>
+</iter>
+<iter>
+<var name="${i}">33</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.724" level="INFO">['TH5006', 'Pitsanulok', 'Raweewan Khampancha', 'TH40020420', 'IM_1062', '4610', 'New', 'New', 'Raweewan.Khampancha@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.724" endtime="20220126 17:45:45.724"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.725" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.724" endtime="20220126 17:45:45.725"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.725" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.725" endtime="20220126 17:45:45.725"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.725" level="INFO">${name} = Raweewan Khampancha</msg>
+<status status="PASS" starttime="20220126 17:45:45.725" endtime="20220126 17:45:45.725"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.726" level="INFO">${hj_one_user} = TH40020420</msg>
+<status status="PASS" starttime="20220126 17:45:45.725" endtime="20220126 17:45:45.726"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.726" level="INFO">${email_address} = Raweewan.Khampancha@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.726" endtime="20220126 17:45:45.726"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.726" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.726" endtime="20220126 17:45:45.726"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.724" endtime="20220126 17:45:45.726"/>
+</iter>
+<iter>
+<var name="${i}">34</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.727" level="INFO">['TH5006', 'Pitsanulok', 'Netamphon Pansap', 'TH40020520', 'IM_1063', '4610', 'New', 'New', 'Netamphon.Pansap@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.726" endtime="20220126 17:45:45.727"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.727" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.727" endtime="20220126 17:45:45.727"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.727" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.727" endtime="20220126 17:45:45.727"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.728" level="INFO">${name} = Netamphon Pansap</msg>
+<status status="PASS" starttime="20220126 17:45:45.727" endtime="20220126 17:45:45.728"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.728" level="INFO">${hj_one_user} = TH40020520</msg>
+<status status="PASS" starttime="20220126 17:45:45.728" endtime="20220126 17:45:45.728"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.728" level="INFO">${email_address} = Netamphon.Pansap@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.728" endtime="20220126 17:45:45.728"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.729" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.728" endtime="20220126 17:45:45.729"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.726" endtime="20220126 17:45:45.729"/>
+</iter>
+<iter>
+<var name="${i}">35</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.729" level="INFO">['TH5006', 'Pitsanulok', 'Kantima Khakho', 'TH40020871', 'IM_1064', '4610', 'New', 'New', 'Kantima.Khakho@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.729" endtime="20220126 17:45:45.729"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.729" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.729" endtime="20220126 17:45:45.729"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.730" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.729" endtime="20220126 17:45:45.730"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.730" level="INFO">${name} = Kantima Khakho</msg>
+<status status="PASS" starttime="20220126 17:45:45.730" endtime="20220126 17:45:45.730"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.730" level="INFO">${hj_one_user} = TH40020871</msg>
+<status status="PASS" starttime="20220126 17:45:45.730" endtime="20220126 17:45:45.730"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.731" level="INFO">${email_address} = Kantima.Khakho@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.730" endtime="20220126 17:45:45.731"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.731" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.731" endtime="20220126 17:45:45.731"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.729" endtime="20220126 17:45:45.731"/>
+</iter>
+<iter>
+<var name="${i}">36</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.731" level="INFO">['TH5006', 'Pitsanulok', 'Wutthiphong Donphai', 'TH40022117', 'IM_1065', '4610', 'New', 'New', 'Wutthiphong.Donphai@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.731" endtime="20220126 17:45:45.731"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.732" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.732" endtime="20220126 17:45:45.732"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.732" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.732" endtime="20220126 17:45:45.732"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.732" level="INFO">${name} = Wutthiphong Donphai</msg>
+<status status="PASS" starttime="20220126 17:45:45.732" endtime="20220126 17:45:45.732"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.733" level="INFO">${hj_one_user} = TH40022117</msg>
+<status status="PASS" starttime="20220126 17:45:45.732" endtime="20220126 17:45:45.733"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.733" level="INFO">${email_address} = Wutthiphong.Donphai@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.733" endtime="20220126 17:45:45.733"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.733" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.733" endtime="20220126 17:45:45.733"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.731" endtime="20220126 17:45:45.733"/>
+</iter>
+<iter>
+<var name="${i}">37</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.734" level="INFO">['TH5006', 'Pitsanulok', 'Thitaya Singsanit', 'TH40023415', 'IM_1066', '4610', 'New', 'New', 'Thitaya.Singsanit@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.734" endtime="20220126 17:45:45.734"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.734" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.734" endtime="20220126 17:45:45.734"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.734" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.734" endtime="20220126 17:45:45.734"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.735" level="INFO">${name} = Thitaya Singsanit</msg>
+<status status="PASS" starttime="20220126 17:45:45.734" endtime="20220126 17:45:45.735"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.735" level="INFO">${hj_one_user} = TH40023415</msg>
+<status status="PASS" starttime="20220126 17:45:45.735" endtime="20220126 17:45:45.735"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.736" level="INFO">${email_address} = Thitaya.Singsanit@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.735" endtime="20220126 17:45:45.736"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.736" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.736" endtime="20220126 17:45:45.736"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.733" endtime="20220126 17:45:45.736"/>
+</iter>
+<iter>
+<var name="${i}">38</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.736" level="INFO">['TH5006', 'Pitsanulok', 'Phakkhawat Rongkaeo', 'TH40024555', 'IM_1067', '4610', 'New', 'New', 'Phakkhawat.Rongkaeo@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.736" endtime="20220126 17:45:45.736"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.737" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.736" endtime="20220126 17:45:45.737"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.737" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.737" endtime="20220126 17:45:45.737"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.737" level="INFO">${name} = Phakkhawat Rongkaeo</msg>
+<status status="PASS" starttime="20220126 17:45:45.737" endtime="20220126 17:45:45.737"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.738" level="INFO">${hj_one_user} = TH40024555</msg>
+<status status="PASS" starttime="20220126 17:45:45.737" endtime="20220126 17:45:45.738"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.738" level="INFO">${email_address} = Phakkhawat.Rongkaeo@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.738" endtime="20220126 17:45:45.738"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.738" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.738" endtime="20220126 17:45:45.738"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.736" endtime="20220126 17:45:45.738"/>
+</iter>
+<iter>
+<var name="${i}">39</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.739" level="INFO">['TH5006', 'Pitsanulok', 'Sorawit Yothaphakdi', 'TH40024559', 'IM_1068', '4610', 'New', 'New', 'Sorawit.Yothaphakdi@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.739" endtime="20220126 17:45:45.739"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.739" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.739" endtime="20220126 17:45:45.739"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.740" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.739" endtime="20220126 17:45:45.740"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.740" level="INFO">${name} = Sorawit Yothaphakdi</msg>
+<status status="PASS" starttime="20220126 17:45:45.740" endtime="20220126 17:45:45.740"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.740" level="INFO">${hj_one_user} = TH40024559</msg>
+<status status="PASS" starttime="20220126 17:45:45.740" endtime="20220126 17:45:45.740"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.741" level="INFO">${email_address} = Sorawit.Yothaphakdi@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.740" endtime="20220126 17:45:45.741"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.741" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.741" endtime="20220126 17:45:45.741"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.739" endtime="20220126 17:45:45.741"/>
+</iter>
+<iter>
+<var name="${i}">40</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.741" level="INFO">['TH5006', 'Pitsanulok', 'Katawut Wongsaita', 'TH40024562', 'IM_1069', '4610', 'New', 'New', 'Katawut.Wongsaita@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.741" endtime="20220126 17:45:45.741"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.742" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.741" endtime="20220126 17:45:45.742"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.742" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.742" endtime="20220126 17:45:45.742"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.742" level="INFO">${name} = Katawut Wongsaita</msg>
+<status status="PASS" starttime="20220126 17:45:45.742" endtime="20220126 17:45:45.742"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.743" level="INFO">${hj_one_user} = TH40024562</msg>
+<status status="PASS" starttime="20220126 17:45:45.742" endtime="20220126 17:45:45.743"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.743" level="INFO">${email_address} = Katawut.Wongsaita@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.743" endtime="20220126 17:45:45.743"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.743" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.743" endtime="20220126 17:45:45.743"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.741" endtime="20220126 17:45:45.743"/>
+</iter>
+<iter>
+<var name="${i}">41</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.744" level="INFO">['TH5006', 'Pitsanulok', 'Phongsarot Changsithong', 'TH40026431', 'IM_1070', '4610', 'New', 'New', 'Phongsarot.Changsithong@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.743" endtime="20220126 17:45:45.744"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.744" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.744" endtime="20220126 17:45:45.744"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.744" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.744" endtime="20220126 17:45:45.744"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.745" level="INFO">${name} = Phongsarot Changsithong</msg>
+<status status="PASS" starttime="20220126 17:45:45.744" endtime="20220126 17:45:45.745"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.745" level="INFO">${hj_one_user} = TH40026431</msg>
+<status status="PASS" starttime="20220126 17:45:45.745" endtime="20220126 17:45:45.745"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.745" level="INFO">${email_address} = Phongsarot.Changsithong@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.745" endtime="20220126 17:45:45.745"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.746" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.745" endtime="20220126 17:45:45.746"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.743" endtime="20220126 17:45:45.746"/>
+</iter>
+<iter>
+<var name="${i}">42</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.746" level="INFO">['TH5006', 'Pitsanulok', 'Suphita Thawikhetkit', 'TH40026519', 'IM_1071', '4610', 'New', 'New', 'Suphita.Thawikhetkit@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.746" endtime="20220126 17:45:45.746"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.746" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.746" endtime="20220126 17:45:45.746"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.747" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.746" endtime="20220126 17:45:45.747"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.747" level="INFO">${name} = Suphita Thawikhetkit</msg>
+<status status="PASS" starttime="20220126 17:45:45.747" endtime="20220126 17:45:45.747"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.747" level="INFO">${hj_one_user} = TH40026519</msg>
+<status status="PASS" starttime="20220126 17:45:45.747" endtime="20220126 17:45:45.747"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.748" level="INFO">${email_address} = Suphita.Thawikhetkit@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.747" endtime="20220126 17:45:45.748"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.748" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.748" endtime="20220126 17:45:45.748"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.746" endtime="20220126 17:45:45.748"/>
+</iter>
+<iter>
+<var name="${i}">43</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.748" level="INFO">['TH5006', 'Pitsanulok', 'Kannika Poodsri', 'TH40028077', 'IM_1072', '4610', 'New', 'New', 'Kannika.Poodsri@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.748" endtime="20220126 17:45:45.748"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.749" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.748" endtime="20220126 17:45:45.749"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.749" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.749" endtime="20220126 17:45:45.749"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.749" level="INFO">${name} = Kannika Poodsri</msg>
+<status status="PASS" starttime="20220126 17:45:45.749" endtime="20220126 17:45:45.749"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.750" level="INFO">${hj_one_user} = TH40028077</msg>
+<status status="PASS" starttime="20220126 17:45:45.749" endtime="20220126 17:45:45.750"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.750" level="INFO">${email_address} = Kannika.Poodsri@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.750" endtime="20220126 17:45:45.750"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.750" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.750" endtime="20220126 17:45:45.750"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.748" endtime="20220126 17:45:45.750"/>
+</iter>
+<iter>
+<var name="${i}">44</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.751" level="INFO">['TH5006', 'Pitsanulok', 'Nattawut Nimnong', 'TH40029114', 'IM_1073', '4610', 'New', 'New', 'Nattawut.Nimnong@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.750" endtime="20220126 17:45:45.751"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.751" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.751" endtime="20220126 17:45:45.751"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.751" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.751" endtime="20220126 17:45:45.751"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.752" level="INFO">${name} = Nattawut Nimnong</msg>
+<status status="PASS" starttime="20220126 17:45:45.751" endtime="20220126 17:45:45.752"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.752" level="INFO">${hj_one_user} = TH40029114</msg>
+<status status="PASS" starttime="20220126 17:45:45.752" endtime="20220126 17:45:45.752"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.752" level="INFO">${email_address} = Nattawut.Nimnong@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.752" endtime="20220126 17:45:45.752"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.753" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.752" endtime="20220126 17:45:45.753"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.750" endtime="20220126 17:45:45.753"/>
+</iter>
+<iter>
+<var name="${i}">45</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.753" level="INFO">['TH5006', 'Pitsanulok', 'Waranya Pabteang', 'TH40029119', 'IM_1074', '4610', 'New', 'New', 'Waranya.Pabteang@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.753" endtime="20220126 17:45:45.753"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.753" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.753" endtime="20220126 17:45:45.753"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.754" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.753" endtime="20220126 17:45:45.754"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.754" level="INFO">${name} = Waranya Pabteang</msg>
+<status status="PASS" starttime="20220126 17:45:45.754" endtime="20220126 17:45:45.754"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.754" level="INFO">${hj_one_user} = TH40029119</msg>
+<status status="PASS" starttime="20220126 17:45:45.754" endtime="20220126 17:45:45.754"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.755" level="INFO">${email_address} = Waranya.Pabteang@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.755" endtime="20220126 17:45:45.755"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.755" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.755" endtime="20220126 17:45:45.755"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.753" endtime="20220126 17:45:45.755"/>
+</iter>
+<iter>
+<var name="${i}">46</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.755" level="INFO">['TH5006', 'Pitsanulok', 'Rungrawee Meekasem', 'TH40029122', 'IM_1075', '4610', 'New', 'New', 'Rungrawee.Meekasem@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.755" endtime="20220126 17:45:45.756"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.756" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.756" endtime="20220126 17:45:45.756"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.756" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.756" endtime="20220126 17:45:45.756"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.756" level="INFO">${name} = Rungrawee Meekasem</msg>
+<status status="PASS" starttime="20220126 17:45:45.756" endtime="20220126 17:45:45.756"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.757" level="INFO">${hj_one_user} = TH40029122</msg>
+<status status="PASS" starttime="20220126 17:45:45.757" endtime="20220126 17:45:45.757"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.757" level="INFO">${email_address} = Rungrawee.Meekasem@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.757" endtime="20220126 17:45:45.757"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.757" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.757" endtime="20220126 17:45:45.757"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.755" endtime="20220126 17:45:45.757"/>
+</iter>
+<iter>
+<var name="${i}">47</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.758" level="INFO">['TH5006', 'Pitsanulok', 'Anan Chanthamat', 'TH40029126', 'IM_1101', '4620', 'New', 'New', 'Anan.Chanthamat@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.758" endtime="20220126 17:45:45.758"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.758" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.758" endtime="20220126 17:45:45.758"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.758" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.758" endtime="20220126 17:45:45.758"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.759" level="INFO">${name} = Anan Chanthamat</msg>
+<status status="PASS" starttime="20220126 17:45:45.759" endtime="20220126 17:45:45.759"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.759" level="INFO">${hj_one_user} = TH40029126</msg>
+<status status="PASS" starttime="20220126 17:45:45.759" endtime="20220126 17:45:45.759"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.759" level="INFO">${email_address} = Anan.Chanthamat@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.759" endtime="20220126 17:45:45.759"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.760" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.760" endtime="20220126 17:45:45.760"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.758" endtime="20220126 17:45:45.760"/>
+</iter>
+<iter>
+<var name="${i}">48</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.760" level="INFO">['TH5006', 'Pitsanulok', 'Sunaree Whaket', 'TH40030793', 'IM_1102', '4620', 'New', 'New', 'Sunaree.Whaket@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.760" endtime="20220126 17:45:45.760"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.761" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.760" endtime="20220126 17:45:45.761"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.761" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.761" endtime="20220126 17:45:45.761"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.761" level="INFO">${name} = Sunaree Whaket</msg>
+<status status="PASS" starttime="20220126 17:45:45.761" endtime="20220126 17:45:45.761"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.762" level="INFO">${hj_one_user} = TH40030793</msg>
+<status status="PASS" starttime="20220126 17:45:45.761" endtime="20220126 17:45:45.762"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.762" level="INFO">${email_address} = Sunaree.Whaket@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.762" endtime="20220126 17:45:45.762"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.762" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.762" endtime="20220126 17:45:45.762"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.760" endtime="20220126 17:45:45.762"/>
+</iter>
+<iter>
+<var name="${i}">49</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.763" level="INFO">['TH5006', 'Pitsanulok', 'Purit Sathaworrawanich', 'TH40030901', 'IM_1103', '4620', 'New', 'New', 'Purit.Sathaworrawanich@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.763" endtime="20220126 17:45:45.763"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.763" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.763" endtime="20220126 17:45:45.763"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.764" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.764" endtime="20220126 17:45:45.764"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.764" level="INFO">${name} = Purit Sathaworrawanich</msg>
+<status status="PASS" starttime="20220126 17:45:45.764" endtime="20220126 17:45:45.764"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.765" level="INFO">${hj_one_user} = TH40030901</msg>
+<status status="PASS" starttime="20220126 17:45:45.764" endtime="20220126 17:45:45.765"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.765" level="INFO">${email_address} = Purit.Sathaworrawanich@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.765" endtime="20220126 17:45:45.765"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.765" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.765" endtime="20220126 17:45:45.765"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.762" endtime="20220126 17:45:45.765"/>
+</iter>
+<iter>
+<var name="${i}">50</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.766" level="INFO">['TH5006', 'Pitsanulok', 'Chotirat Kimsung', 'TH40034386', 'IM_1104', '4620', 'New', 'New', 'Chotirat.Kimsung@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.765" endtime="20220126 17:45:45.766"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.766" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.766" endtime="20220126 17:45:45.766"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.766" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.766" endtime="20220126 17:45:45.766"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.767" level="INFO">${name} = Chotirat Kimsung</msg>
+<status status="PASS" starttime="20220126 17:45:45.766" endtime="20220126 17:45:45.767"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.767" level="INFO">${hj_one_user} = TH40034386</msg>
+<status status="PASS" starttime="20220126 17:45:45.767" endtime="20220126 17:45:45.767"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.767" level="INFO">${email_address} = Chotirat.Kimsung@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.767" endtime="20220126 17:45:45.767"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.768" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.767" endtime="20220126 17:45:45.768"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.765" endtime="20220126 17:45:45.768"/>
+</iter>
+<iter>
+<var name="${i}">51</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.768" level="INFO">['TH5006', 'Pitsanulok', 'Pattatorn Pukoet', 'TH40036122', 'IM_1105', '4620', 'New', 'New', 'Pattatorn.Pukoet@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.768" endtime="20220126 17:45:45.768"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.768" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.768" endtime="20220126 17:45:45.769"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.769" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.769" endtime="20220126 17:45:45.769"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.769" level="INFO">${name} = Pattatorn Pukoet</msg>
+<status status="PASS" starttime="20220126 17:45:45.769" endtime="20220126 17:45:45.769"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.770" level="INFO">${hj_one_user} = TH40036122</msg>
+<status status="PASS" starttime="20220126 17:45:45.770" endtime="20220126 17:45:45.770"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.770" level="INFO">${email_address} = Pattatorn.Pukoet@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.770" endtime="20220126 17:45:45.770"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.770" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.770" endtime="20220126 17:45:45.770"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.768" endtime="20220126 17:45:45.770"/>
+</iter>
+<iter>
+<var name="${i}">52</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.771" level="INFO">['TH5006', 'Pitsanulok', 'Phalatip Sukkum', 'TH40037462', 'IM_1106', '4620', 'New', 'New', 'Phalatip.Sukkum@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.771" endtime="20220126 17:45:45.771"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.771" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.771" endtime="20220126 17:45:45.771"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.771" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.771" endtime="20220126 17:45:45.771"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.772" level="INFO">${name} = Phalatip Sukkum</msg>
+<status status="PASS" starttime="20220126 17:45:45.772" endtime="20220126 17:45:45.772"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.772" level="INFO">${hj_one_user} = TH40037462</msg>
+<status status="PASS" starttime="20220126 17:45:45.772" endtime="20220126 17:45:45.772"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.772" level="INFO">${email_address} = Phalatip.Sukkum@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.772" endtime="20220126 17:45:45.772"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.773" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.773" endtime="20220126 17:45:45.773"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.771" endtime="20220126 17:45:45.773"/>
+</iter>
+<iter>
+<var name="${i}">53</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.773" level="INFO">['TH5006', 'Pitsanulok', 'Wattanasron Thammabut', 'TH40037463', 'IM_1107', '4620', 'New', 'New', 'Wattanasron.Thammabut@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.773" endtime="20220126 17:45:45.773"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.773" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.773" endtime="20220126 17:45:45.773"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.774" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.773" endtime="20220126 17:45:45.774"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.774" level="INFO">${name} = Wattanasron Thammabut</msg>
+<status status="PASS" starttime="20220126 17:45:45.774" endtime="20220126 17:45:45.774"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.774" level="INFO">${hj_one_user} = TH40037463</msg>
+<status status="PASS" starttime="20220126 17:45:45.774" endtime="20220126 17:45:45.774"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.775" level="INFO">${email_address} = Wattanasron.Thammabut@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.774" endtime="20220126 17:45:45.775"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.775" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.775" endtime="20220126 17:45:45.775"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.773" endtime="20220126 17:45:45.775"/>
+</iter>
+<iter>
+<var name="${i}">54</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.775" level="INFO">['TH5006', 'Pitsanulok', 'Sunisa Lorkla', 'TH40037465', 'IM_1108', '4620', 'New', 'New', 'Sunisa.Lorkla@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.775" endtime="20220126 17:45:45.775"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.776" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.775" endtime="20220126 17:45:45.776"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.776" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.776" endtime="20220126 17:45:45.776"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.776" level="INFO">${name} = Sunisa Lorkla</msg>
+<status status="PASS" starttime="20220126 17:45:45.776" endtime="20220126 17:45:45.776"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.777" level="INFO">${hj_one_user} = TH40037465</msg>
+<status status="PASS" starttime="20220126 17:45:45.776" endtime="20220126 17:45:45.777"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.777" level="INFO">${email_address} = Sunisa.Lorkla@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.777" endtime="20220126 17:45:45.777"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.777" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.777" endtime="20220126 17:45:45.777"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.775" endtime="20220126 17:45:45.777"/>
+</iter>
+<iter>
+<var name="${i}">55</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.777" level="INFO">['TH5006', 'Pitsanulok', 'Poramin Inchoo', 'TH40041693', 'IM_1109', '4620', 'New', 'New', 'Poramin.Inchoo@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.777" endtime="20220126 17:45:45.778"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.778" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.778" endtime="20220126 17:45:45.778"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.778" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.778" endtime="20220126 17:45:45.778"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.778" level="INFO">${name} = Poramin Inchoo</msg>
+<status status="PASS" starttime="20220126 17:45:45.778" endtime="20220126 17:45:45.778"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.779" level="INFO">${hj_one_user} = TH40041693</msg>
+<status status="PASS" starttime="20220126 17:45:45.778" endtime="20220126 17:45:45.779"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.779" level="INFO">${email_address} = Poramin.Inchoo@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.779" endtime="20220126 17:45:45.779"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.779" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.779" endtime="20220126 17:45:45.779"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.777" endtime="20220126 17:45:45.779"/>
+</iter>
+<iter>
+<var name="${i}">56</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.780" level="INFO">['TH5006', 'Pitsanulok', 'Supabodee Supabodeesakul', 'TH40043116', 'IM_1110', '4620', 'New', 'New', 'Supabodee.Supabodeesakul@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.779" endtime="20220126 17:45:45.780"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.780" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.780" endtime="20220126 17:45:45.780"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.780" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.780" endtime="20220126 17:45:45.780"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.781" level="INFO">${name} = Supabodee Supabodeesakul</msg>
+<status status="PASS" starttime="20220126 17:45:45.780" endtime="20220126 17:45:45.781"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.781" level="INFO">${hj_one_user} = TH40043116</msg>
+<status status="PASS" starttime="20220126 17:45:45.781" endtime="20220126 17:45:45.781"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.781" level="INFO">${email_address} = Supabodee.Supabodeesakul@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.781" endtime="20220126 17:45:45.781"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.781" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.781" endtime="20220126 17:45:45.781"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.779" endtime="20220126 17:45:45.782"/>
+</iter>
+<iter>
+<var name="${i}">57</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.782" level="INFO">['TH5006', 'Pitsanulok', 'Phinyaphat Chaiem', 'TH40045095', 'IM_1111', '4620', 'New', 'New', 'Phinyaphat.Chaiem@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.782" endtime="20220126 17:45:45.782"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.782" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.782" endtime="20220126 17:45:45.782"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.782" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.782" endtime="20220126 17:45:45.782"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.783" level="INFO">${name} = Phinyaphat Chaiem</msg>
+<status status="PASS" starttime="20220126 17:45:45.783" endtime="20220126 17:45:45.783"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.783" level="INFO">${hj_one_user} = TH40045095</msg>
+<status status="PASS" starttime="20220126 17:45:45.783" endtime="20220126 17:45:45.783"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.783" level="INFO">${email_address} = Phinyaphat.Chaiem@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.783" endtime="20220126 17:45:45.783"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.784" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.783" endtime="20220126 17:45:45.784"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.782" endtime="20220126 17:45:45.784"/>
+</iter>
+<iter>
+<var name="${i}">58</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.784" level="INFO">['TH5006', 'Pitsanulok', 'Arisa Detprae', 'TH40045097', 'IM_1112', '4620', 'New', 'New', 'Arisa.Detprae@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.784" endtime="20220126 17:45:45.784"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.784" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.784" endtime="20220126 17:45:45.784"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.785" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.784" endtime="20220126 17:45:45.785"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.785" level="INFO">${name} = Arisa Detprae</msg>
+<status status="PASS" starttime="20220126 17:45:45.785" endtime="20220126 17:45:45.785"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.785" level="INFO">${hj_one_user} = TH40045097</msg>
+<status status="PASS" starttime="20220126 17:45:45.785" endtime="20220126 17:45:45.785"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.786" level="INFO">${email_address} = Arisa.Detprae@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.785" endtime="20220126 17:45:45.786"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.786" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.786" endtime="20220126 17:45:45.786"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.784" endtime="20220126 17:45:45.786"/>
+</iter>
+<iter>
+<var name="${i}">59</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.786" level="INFO">['TH5006', 'Pitsanulok', 'Nontiya Pongsee', 'TH40046028', 'IM_1113', '4620', 'New', 'New', 'Nontiya.Pongsee@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.786" endtime="20220126 17:45:45.786"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.787" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.786" endtime="20220126 17:45:45.787"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.787" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.787" endtime="20220126 17:45:45.787"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.787" level="INFO">${name} = Nontiya Pongsee</msg>
+<status status="PASS" starttime="20220126 17:45:45.787" endtime="20220126 17:45:45.787"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.788" level="INFO">${hj_one_user} = TH40046028</msg>
+<status status="PASS" starttime="20220126 17:45:45.787" endtime="20220126 17:45:45.788"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.788" level="INFO">${email_address} = Nontiya.Pongsee@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.788" endtime="20220126 17:45:45.788"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.788" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.788" endtime="20220126 17:45:45.788"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.786" endtime="20220126 17:45:45.788"/>
+</iter>
+<iter>
+<var name="${i}">60</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.789" level="INFO">['TH5006', 'Pitsanulok', 'Anupong Huiaeng', 'TH40046092', 'IM_1114', '4620', 'New', 'New', 'Anupong.Huiaeng@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.789" endtime="20220126 17:45:45.789"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.789" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.789" endtime="20220126 17:45:45.789"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.789" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.789" endtime="20220126 17:45:45.789"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.790" level="INFO">${name} = Anupong Huiaeng</msg>
+<status status="PASS" starttime="20220126 17:45:45.789" endtime="20220126 17:45:45.790"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.790" level="INFO">${hj_one_user} = TH40046092</msg>
+<status status="PASS" starttime="20220126 17:45:45.790" endtime="20220126 17:45:45.790"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.790" level="INFO">${email_address} = Anupong.Huiaeng@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.790" endtime="20220126 17:45:45.790"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.790" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.790" endtime="20220126 17:45:45.790"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.788" endtime="20220126 17:45:45.791"/>
+</iter>
+<iter>
+<var name="${i}">61</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.791" level="INFO">['TH5006', 'Pitsanulok', 'Thatchanon Duangsuwan', 'TH40050842', 'IM_1115', '4620', 'New', 'New', 'Thatchanon.Duangsuwan@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.791" endtime="20220126 17:45:45.791"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.791" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.791" endtime="20220126 17:45:45.791"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.791" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.791" endtime="20220126 17:45:45.791"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.792" level="INFO">${name} = Thatchanon Duangsuwan</msg>
+<status status="PASS" starttime="20220126 17:45:45.792" endtime="20220126 17:45:45.792"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.792" level="INFO">${hj_one_user} = TH40050842</msg>
+<status status="PASS" starttime="20220126 17:45:45.792" endtime="20220126 17:45:45.792"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.792" level="INFO">${email_address} = Thatchanon.Duangsuwan@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.792" endtime="20220126 17:45:45.792"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.793" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.792" endtime="20220126 17:45:45.793"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.791" endtime="20220126 17:45:45.793"/>
+</iter>
+<iter>
+<var name="${i}">62</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.793" level="INFO">['TH5006', 'Pitsanulok', 'Suphanee Muniam', 'TH40060333', 'IM_1116', '4620', 'New', 'New', 'Suphanee.Muniam@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.793" endtime="20220126 17:45:45.793"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.793" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.793" endtime="20220126 17:45:45.793"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.794" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.793" endtime="20220126 17:45:45.794"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.794" level="INFO">${name} = Suphanee Muniam</msg>
+<status status="PASS" starttime="20220126 17:45:45.794" endtime="20220126 17:45:45.794"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.794" level="INFO">${hj_one_user} = TH40060333</msg>
+<status status="PASS" starttime="20220126 17:45:45.794" endtime="20220126 17:45:45.794"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.794" level="INFO">${email_address} = Suphanee.Muniam@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.794" endtime="20220126 17:45:45.794"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.795" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.795" endtime="20220126 17:45:45.795"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.793" endtime="20220126 17:45:45.795"/>
+</iter>
+<iter>
+<var name="${i}">63</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.795" level="INFO">['TH5006', 'Pitsanulok', 'Suwichaya Wannaprasroeth', 'TH40063659', 'IM_1117', '4620', 'New', 'New', 'Suwichaya.Wannaprasroeth@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.795" endtime="20220126 17:45:45.795"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.796" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.795" endtime="20220126 17:45:45.796"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.796" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.796" endtime="20220126 17:45:45.796"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.796" level="INFO">${name} = Suwichaya Wannaprasroeth</msg>
+<status status="PASS" starttime="20220126 17:45:45.796" endtime="20220126 17:45:45.796"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.796" level="INFO">${hj_one_user} = TH40063659</msg>
+<status status="PASS" starttime="20220126 17:45:45.796" endtime="20220126 17:45:45.797"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.797" level="INFO">${email_address} = Suwichaya.Wannaprasroeth@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.797" endtime="20220126 17:45:45.797"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.797" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.797" endtime="20220126 17:45:45.797"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.795" endtime="20220126 17:45:45.797"/>
+</iter>
+<iter>
+<var name="${i}">64</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.797" level="INFO">['TH5006', 'Pitsanulok', 'Niparat Saiyakhom', 'TH40063664', 'IM_1118', '4620', 'New', 'New', 'Niparat.Saiyakhom@lotuss.com', 'SSO', 'Picker', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.797" endtime="20220126 17:45:45.797"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.798" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.798" endtime="20220126 17:45:45.798"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.798" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.798" endtime="20220126 17:45:45.798"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.798" level="INFO">${name} = Niparat Saiyakhom</msg>
+<status status="PASS" starttime="20220126 17:45:45.798" endtime="20220126 17:45:45.798"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.799" level="INFO">${hj_one_user} = TH40063664</msg>
+<status status="PASS" starttime="20220126 17:45:45.798" endtime="20220126 17:45:45.799"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.799" level="INFO">${email_address} = Niparat.Saiyakhom@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.799" endtime="20220126 17:45:45.799"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.799" level="INFO">${role} = Picker</msg>
+<status status="PASS" starttime="20220126 17:45:45.799" endtime="20220126 17:45:45.799"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.797" endtime="20220126 17:45:45.799"/>
+</iter>
+<iter>
+<var name="${i}">65</var>
+<kw name="Log" library="BuiltIn">
+<arg>${list}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220126 17:45:45.800" level="INFO">['TH5006', 'Pitsanulok', 'Mayuree Mechai', 'TH22722760', 'IM_1119', '4620', 'New', 'New', 'Mayuree.Mechai@lotuss.com', 'SSO', 'Store Manager', 'Tob']</msg>
+<status status="PASS" starttime="20220126 17:45:45.799" endtime="20220126 17:45:45.800"/>
+</kw>
+<kw name="Get Assigned Store From Csv" library="common_command">
+<var>${assigned_store}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.800" level="INFO">${assigned_store} = TH5006</msg>
+<status status="PASS" starttime="20220126 17:45:45.800" endtime="20220126 17:45:45.800"/>
+</kw>
+<kw name="Get Store Name From Csv" library="common_command">
+<var>${store_name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.800" level="INFO">${store_name} = Pitsanulok</msg>
+<status status="PASS" starttime="20220126 17:45:45.800" endtime="20220126 17:45:45.800"/>
+</kw>
+<kw name="Get Name From Csv" library="common_command">
+<var>${name}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.801" level="INFO">${name} = Mayuree Mechai</msg>
+<status status="PASS" starttime="20220126 17:45:45.800" endtime="20220126 17:45:45.801"/>
+</kw>
+<kw name="Get Hj One User From Csv" library="common_command">
+<var>${hj_one_user}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.801" level="INFO">${hj_one_user} = TH22722760</msg>
+<status status="PASS" starttime="20220126 17:45:45.801" endtime="20220126 17:45:45.801"/>
+</kw>
+<kw name="Get Email Address From Csv" library="common_command">
+<var>${email_address}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.801" level="INFO">${email_address} = Mayuree.Mechai@lotuss.com</msg>
+<status status="PASS" starttime="20220126 17:45:45.801" endtime="20220126 17:45:45.801"/>
+</kw>
+<kw name="Get Role From Csv" library="common_command">
+<var>${role}</var>
+<arg>${list}[${i}]</arg>
+<msg timestamp="20220126 17:45:45.801" level="INFO">${role} = Store Manager</msg>
+<status status="PASS" starttime="20220126 17:45:45.801" endtime="20220126 17:45:45.802"/>
+</kw>
+<status status="PASS" starttime="20220126 17:45:45.799" endtime="20220126 17:45:45.802"/>
+</iter>
+<status status="PASS" starttime="20220126 17:45:45.628" endtime="20220126 17:45:45.802"/>
+</for>
+<tag>csv</tag>
+<status status="PASS" starttime="20220126 17:45:45.626" endtime="20220126 17:45:45.802"/>
+</test>
+<status status="PASS" starttime="20220126 17:45:45.230" endtime="20220126 17:45:45.802"/>
+</suite>
+<status status="PASS" starttime="20220126 17:45:45.201" endtime="20220126 17:45:45.803"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">csv</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Readfile">Testcases.Readfile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
