@@ -1,0 +1,11 @@
+#robot output
+log.html
+output.xml
+report.html
+.png
+
+#.idea
+.idea
+
+#sikuli
+.txt
