@@ -1,0 +1,5 @@
+# oneLogin prod
+lotuss_onelogin_icon: xpath="//*[@src='https://cdn.onelogin.com/images/brands/logos/login/43be3852a62688fb7db5e0c7e91d0f65a5b67179.png?1622303614']"
+onelogin_username: xpath="//*[@id='username']"
+onelogin_password: xpath="//*[@id='password']"
+onelogin_continue_btn: xpath="//*[text()='Continue']"

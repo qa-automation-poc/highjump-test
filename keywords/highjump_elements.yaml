@@ -1,0 +1,49 @@
+# Login page
+korber_icon: xpath="//img[@src='Images/logo.png']"
+signin_label: xpath="//div[@data-hj-test-id='content-title' ]//*[text()='Sign In']"
+onelogin_btn: xpath="//*[text()='OneLogin']"
+#hj_username_txb: xpath="//hj-textbox[@data-hj-test-id='username']"
+hj_username_txb: xpath="//*[@class='k-textbox' and @type='text']//ancestor::*[@data-hj-test-id='username']"
+
+# Homepage
+koeber_icon_homepage: xpath="//*[@class='home-page-background-image']"
+menu_toggle_btn: xpath="//*[@data-hj-test-id='menuView']//*[@id='menuButtonToggle']"
+menu_korber_one_btn: xpath="//*[@id='menu']//*[text()='Körber One']"
+menu_security: xpath="//*[text()='Security']"
+menu_user_and_roles: xpath="//*[text()='Users and Roles']"
+
+user_and_roles_label: xpath="//*[@data-hj-test-id='hj-active-page-title' and text()='Users and Roles']"
+user_btn: xpath="//*[text()='USERS']"
+user_label: xpath="//*[@data-hj-test-id='hj-active-page-title' and text()='Users']"
+new_user_btn: xpath="//*[@data-hj-test-id='new-user']"
+new_user_label: xpath="//*[@data-hj-test-id='hj-active-page-title' and text()='New User']"
+folder_icon: xpath="//*[@class='fa fa-folder-open-o']"
+select_user_template_label: xpath="//*[@data-hj-test-id='html-dialog-title' and text()='Select User Template']"
+select_template_btn: xpath="//*[@data-hj-test-id='html-dialog-custom-button']//*[text()='Select']"
+
+users_and_role:
+gerenal_tab: xpath="//div[@data-hj-test-id='flex-shrink']//span[normalize-space(text())='General']"
+user_interface_tab: xpath="//div[@data-hj-test-id='flex-shrink']//span[normalize-space(text())='User Interface']"
+identity_claims_tab: xpath="//div[@data-hj-test-id='flex-shrink']//span[normalize-space(text())='Identity Claims']"
+
+username_txb: xpath="//hj-textbox[@data-hj-test-id='logOnName']/input"
+sso_only_cxb: xpath="//hj-checkbox[@data-hj-test-id="isSSO"]//input"
+firstname_txb: xpath="//hj-textbox[@data-hj-test-id='firstName']/input"
+lastname_txb: xpath="//hj-textbox[@data-hj-test-id='lastName']/input"
+email_txb: xpath="//hj-textbox[@data-hj-test-id='email']//input"
+
+culture_ddl: xpath  en-GB English (United Kingdom) English (United Kingdom)
+
+korber_one_mobile:
+expand_icon: xpath="//span[normalize-space(text())='Körber One Mobile']//ancestor::div[@class="application-identity-claims"]//a[@data-hj-test-id='hj-panel-expander']"
+app_server_name: xpath="//span[normalize-space(text())='App Server Name']//ancestor::div[@data-hj-test-id="field-cell"]//input"
+device_name: xpath="//span[normalize-space(text())='Device Name']//ancestor::div[@data-hj-test-id="field-cell"]//input"
+port_number: xpath="//span[normalize-space(text())='Port Number']//ancestor::div[@data-hj-test-id="field-cell"]//input"
+web_terminate_gateway_server_name: xpath="//span[normalize-space(text())='Web Terminal Gateway Server Name']//ancestor::div[@data-hj-test-id="field-cell"]//input"
+
+save_btn: xpath="//li[@data-hj-test-id='edit-save']"
+
+user_management:
+query_btn: xpath="//li[@data-hj-test-id='query-button']"
+add_employee_btn: xpath="//span[normalize-space(text())='Add Employee']"
+store_id_ddl: xpath="//span[normalize-space(text())='Store ID']//ancestor::div[@data-hj-test-id='field-cell']//span[@class='k-input']"
